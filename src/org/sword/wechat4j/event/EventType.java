@@ -37,4 +37,5 @@ public enum EventType {
 	kf_create_session,	   //接入会话
 	kf_close_session,	   //关闭会话
 	kf_switch_session,	   //转接会话
+	user_get_card,         //获得卡劵
 }

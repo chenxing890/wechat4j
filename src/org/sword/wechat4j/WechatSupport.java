@@ -162,6 +162,9 @@ public abstract class WechatSupport {
 		}
 	}
 	
+	
+	
+	
 	/**
 	 * event事件分发
 	 */
@@ -217,13 +220,18 @@ public abstract class WechatSupport {
 		case kf_switch_session:
 			kfSwitchSession();
 			break;
+		case user_get_card:
+            userGetCard();
+            break;
 		default:
+		    otherEvent(event);
 			break;
 		}
 	}
 	
 
-	/**
+
+    /**
 	 * 返回响应数据
 	 * @return
 	 */
@@ -501,4 +509,19 @@ public abstract class WechatSupport {
 	 * 客服人员有转接会话
 	 */
 	protected abstract void kfSwitchSession();
+	
+	/**
+     * 另外的事件
+     * @param event
+     * @author chen
+     * 2016年4月7日
+     */
+    protected abstract void otherEvent(EventType event) ;
+    
+    /**
+     * 获得卡劵事件
+     * @author chen
+     * 2016年4月7日
+     */
+    protected abstract void userGetCard() ;
 }

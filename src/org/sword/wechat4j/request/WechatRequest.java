@@ -45,6 +45,11 @@ public class WechatRequest {
 	private SendLocationInfo SendLocationInfo;   //发送的位置信息
 	private String Recognition;
 	
+	private String CardId; //卡劵Id
+	private String IsGiveByFriend; //是否是朋友赠送
+	private String UserCardCode;  //卡劵号码
+	private String OuterId; //领劵场景
+	
 	@XmlElement(name="Recognition")
 	public String getRecognition() {
 		return Recognition;
@@ -242,8 +247,36 @@ public class WechatRequest {
 		SendLocationInfo = sendLocationInfo;
 	}
 	
-	
-	
-	
+	@XmlElement(name="CardId")
+    public String getCardId() {
+        return CardId;
+    }
+    public void setCardId(String cardId) {
+        CardId = cardId;
+    }
+    
+    @XmlElement(name="IsGiveByFriend")
+    public String getIsGiveByFriend() {
+        return IsGiveByFriend;
+    }
+    public void setIsGiveByFriend(String isGiveByFriend) {
+        IsGiveByFriend = isGiveByFriend;
+    }
+    
+    @XmlElement(name="UserCardCode")
+    public String getUserCardCode() {
+        return UserCardCode;
+    }
+    public void setUserCardCode(String userCardCode) {
+        UserCardCode = userCardCode;
+    }
+    
+    @XmlElement(name="OuterId")
+    public String getOuterId() {
+        return OuterId;
+    }
+    public void setOuterId(String outerId) {
+        OuterId = outerId;
+    }
 	
 }
